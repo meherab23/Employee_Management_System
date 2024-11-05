@@ -1,0 +1,275 @@
+.dashboard-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+
+    .main-content {
+        flex-grow: 3;
+        padding: 10px;
+        background: linear-gradient(135deg, #a4cbf7, #fdfdfd);
+        margin-top: px;
+        flex: 1;
+        padding: 100px;
+
+        .controls {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .search-container {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .search-icon {
+                    position: absolute;
+                    left: 15px;
+                    color: #7f8c8d;
+                    font-size: 1.2rem;
+                }
+
+                .search-bar {
+                    padding: 10px 15px 10px 40px;
+                    border: 1px solid #ccc;
+                    border-radius: 20px;
+                    width: 250px;
+                    transition: all 0.3s;
+                    background-color: #f9f9f9;
+                    color: #333;
+                    font-size: 1rem;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+                    &:hover {
+                        background-color: #ffffff;
+                        border: 1px solid #2980b9;
+                    }
+
+                    &:focus {
+                        border: 1px solid #3498db;
+                        outline: none;
+                        background-color: #ffffff;
+                    }
+
+                    &::placeholder {
+                        color: #999;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .table-title {
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #2980b9;
+            text-align: center;
+        }
+
+        .employee-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: linear-gradient(135deg, #a4cbf7, #fdfdfd);
+
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #2980b9;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+        .navbar-title {
+            margin: 0;
+        }
+    
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+    
+            .logout-icon {
+                cursor: pointer;
+                font-size: 1.5rem;
+                color: rgb(146, 19, 19);
+    
+                &:hover {
+                    color: #d83939;
+                }
+            }
+        }
+        
+
+        .table-title {
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #2980b9;
+            text-align: center;
+        }
+
+        .employee-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            width: 100%;
+            margin-top: 50px;
+
+
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #2980b9;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+        .logout-button {
+            background-color: transparent;
+            border: none;
+            color: #e74c3c;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+
+            svg {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                color: #df2e1a;
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+
+            .edit-icon, .delete-icon, .salary-icon {
+                cursor: pointer;
+                color: #3498db;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #2980b9;
+                }
+
+                &.delete-icon {
+                    color: #e74c3c;
+
+                    &:hover {
+                        color: #c0392b;
+                    }
+                }
+
+                &.salary-icon {
+                    color: #f39c12;
+
+                    &:hover {
+                        color: #e67e22;
+                    }
+                }
+            }
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: flex-start; 
+            margin-top: 5px;
+        }
+        
+        .pagination {
+            display: flex;
+            align-items: center;
+
+            .pagination-icon {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 1.3rem;
+                color: #007bff;
+                margin: 0 10px;
+
+                &:hover {
+                    color: #0056b3;
+                }
+
+                &:disabled {
+                    color: #ccc;
+                    cursor: not-allowed;
+                }
+            }
+
+            .pagination-info {
+                margin: 0 20px;
+            }
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .modal-content {
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+
+                h2 {
+                    margin-bottom: 15px;
+                }
+
+                .modal-actions {
+                    display: flex;
+                    justify-content: space-around;
+
+                    button {
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 4px;
+                        background-color: #2980b9;
+                        color: white;
+                        cursor: pointer;
+                        transition: background 0.3s;
+
+                        &:hover {
+                            background-color: #3498db;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #dc3545; // Danger color
+                            &:hover {
+                                background-color: #c82333; // Darker shade on hover
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .confirmation-message {
+            color: rgb(18, 19, 18);
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }

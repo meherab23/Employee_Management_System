@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/venv/bin/uvicorn",
+            "args": [
+                "main:app",
+                "--reload"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
